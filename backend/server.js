@@ -18,7 +18,7 @@ var certificate = fs.readFileSync('./localhost+2.pem', 'utf8');
 var credentials = { key: privateKey, cert: certificate };
 
 // MongoDB connection
-mongoose.connect("mongodb+srv://arjun:arjun@cluster0.8wlh9kp.mongodb.net/My_database", {
+mongoose.connect("enter your Mongo URI", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
