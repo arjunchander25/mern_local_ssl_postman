@@ -1,0 +1,71 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-container {
+  display: flex;
+  height: 100vh;
+  align-items: center; /* Ensures vertical centering at the full viewport height */
+}
+
+.image-container {
+  flex: none; /* Flex none to not participate in flex sizing */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Optional padding for aesthetics */
+  max-width: 30%; /* Limiting the maximum width of the container based on the image size */
+  height: fit; /* Height will adjust based on content */
+}
+
+.image-container img {
+  width: 100%; /* Makes the image fill the container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 80vh; /* Limits the image height if too large */
+  animation: bounce 2s infinite; /* Bounce animation */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.login-container {
+  flex: 1; /* Takes up the rest of the horizontal space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  width: 60%; /* Adjust width as per design requirement */
+  max-width: 500px; /* Avoids being too wide on larger screens */
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(15, 29, 227, 0.37);
+}
+
+/* Additional styles for Material-UI components */
+.button_style, .MuiButton-containedPrimary {
+  font-size: 16px;
+}
+
+.MuiTextField-root {
+  width: 100%; /* Ensure full width text fields */
+  color: #FFF; /* White text color */
+}
+
+.MuiInputBase-input {
+  color: #FFF; /* White input text color */
+}
